@@ -1,0 +1,18 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+    check:                               # this job name becomes the status check's name
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v7         # get the code
+        - uses: actions/setup-node@v7       # install Node
+          with:
+            node-version-file: .nvmrc      # same version everywhere
+            cache: npm                     # reuse downloads between runs
+        - run: npm ci                       # exact install from the lockfile
+        - run: npm run lint
+        - run: npm test
+        - run: npm run build
