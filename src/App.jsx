@@ -1,21 +1,11 @@
-import { Routes, Route, Outlet } from 'react-router-dom';
-import { Home } from './pages/Home';
-import { Booking } from './pages/Booking';
-import { About } from './pages/About';
-import { Shows } from './pages/Shows';
-import { NotFound } from './pages/NotFound';
+import { Routes, Route } from 'react-router';
+import Home from './pages/Home';
+import Booking from './pages/Booking';
+import About from './pages/About';
+import Shows from './pages/Shows';
+import NotFound from './pages/NotFound';
+import Layout from './components/Layout';
 
-function Layout() {
-  return (
-    <>
-      <SiteHeader />
-      <main>
-        <Outlet/>
-      </main>
-      <SiteFooter />
-    </>
-  );
-}
 
 export default function App() {
   return (
@@ -25,7 +15,7 @@ export default function App() {
         <Route path="about" element={<About/>}/>
         <Route path="booking" element={<Booking/>}/>
         <Route path="shows" element={<Shows/>}/>
-        <Route path="not-found" element={<NotFound/>}/>
+        <Route path="notfound" element={<NotFound/>}/>
       </Route>
     </Routes>
   );
