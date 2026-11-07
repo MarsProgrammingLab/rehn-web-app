@@ -1,5 +1,3 @@
 export default function SiteFooter() {
-    return (
-        <footer>Footer</footer>
-    )
+  return <footer>Footer</footer>;
 }
