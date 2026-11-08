@@ -1,1 +1,3 @@
-nav a[aria-current="page"] { text-decoration: underline; }
+nav a[aria-current="page"] {
+  text-decoration: underline;
+}
