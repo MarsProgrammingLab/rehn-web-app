@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "Anton";
+  src: url("./assets/fonts/anton-v27-latin-regular.woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("./assets/fonts/work-sans-v24-latin/work-sans-v24-latin-regular.woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("./assets/fonts/work-sans-v24-latin/work-sans-v24-latin-500.woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("./assets/fonts/work-sans-v24-latin/work-sans-v24-latin-600.woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /*  Colors */
+  --color-bg: #000000;
+  --color-surface: #141210;
+  --color-placeholder: #221f1c;
+  --color-text: #f2e4cd;
+  --color-body-text: #dccfbb;
+  --color-muted-text: #bdb2a2;
+  --color-footer-text: #a69b8c;
+  --color-border-subtle: #2a2622;
+  --color-border-strong: #4a443d;
+  --color-accent: #ea3c73;
+  --color-brand: #d7225c;
+
+  /* Fonts: stacks only. Weight and case go on the rules that use them. */
+  --font-display: "Anton", Impact, "Arial Narrow", sans-serif;
+  --font-body: "Work Sans", system-ui, sans-serif;
+
+  /* Layout */
+  --layout-max-width: 1200px;
+  --layout-gutter: 20px; /* side padding on phones */
+
+  /* Radius */
+  --radius-pill: 999px;
+  --radius-card: 14px;
+  --radius-small: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img,
+picture,
+svg,
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.6;
+}
